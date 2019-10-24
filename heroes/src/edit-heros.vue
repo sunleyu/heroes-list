@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import axios from "axios";
+
 export default {
   data() {
     return {
@@ -29,7 +29,7 @@ export default {
   created() {
     const { editid } = this.$route.params;
     if (editid) {
-      axios({
+       this.$axios({
         url: `http://localhost:3000/heros/${editid}`
       }).then(result => {
         this.formData = result.data;
@@ -41,7 +41,7 @@ export default {
       if (this.formData.name && this.formData.gender) {
         const { editid } = this.$route.params;
 
-        axios({
+         this.$axios({
           method: "put",
           url: `http://localhost:3000/heros/${editid}`,
           data: this.formData

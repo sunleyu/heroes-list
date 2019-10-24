@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import axios from "axios";
+
 export default {
 data(){
     return{
@@ -29,7 +29,7 @@ data(){
 methods:{
     addheros(){
         if(this.formData.name&&this.formData.gender){
-            axios({
+            this.$axios({
                 method:"post",
                 url:"http://localhost:3000/heros",
                 data:this.formData,

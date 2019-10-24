@@ -31,7 +31,6 @@
 </template>
 
 <script>
-import axios from "axios";
 export default {
   //定义数据接收
   data(){
@@ -41,7 +40,7 @@ export default {
   },
   methods:{
     loadData(){
-      axios({
+       this.$axios({
       url:"http://localhost:3000/heros"
 
     }).then(result=>{
@@ -51,7 +50,7 @@ export default {
     },
     delData(id){
       if(confirm("您确定删除吗?")){
-         axios({
+          this.$axios({
         method:"delete",
         url:`http://localhost:3000/heros/${id}`
       }).then(()=>{
