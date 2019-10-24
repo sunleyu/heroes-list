@@ -31,7 +31,7 @@ methods:{
         if(this.formData.name&&this.formData.gender){
             this.$axios({
                 method:"post",
-                url:"http://localhost:3000/heros",
+                url:"/heros",
                 data:this.formData,
             }).then(()=>{
                 this.$router.push("/heros")

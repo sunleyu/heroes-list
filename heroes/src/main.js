@@ -7,8 +7,11 @@ import "./../node_modules/bootstrap/dist/css/bootstrap.css";
 import "./assets/index.css";
 import router from "./router";
 import axios from "axios"
+
+//设置常态值
+axios.defaults.baseURL = "http://localhost:3000"; // 设置共享的方法 
 //将axios赋值给vue对象的原型属性,所有文件共享
-Vue.prototype.$axios=axios;
+Vue.prototype.$axios = axios;
 new Vue({
   el: '#app',
   router,

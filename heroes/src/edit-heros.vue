@@ -30,7 +30,7 @@ export default {
     const { editid } = this.$route.params;
     if (editid) {
        this.$axios({
-        url: `http://localhost:3000/heros/${editid}`
+        url: `/heros/${editid}`
       }).then(result => {
         this.formData = result.data;
       });
@@ -43,7 +43,7 @@ export default {
 
          this.$axios({
           method: "put",
-          url: `http://localhost:3000/heros/${editid}`,
+          url: `/heros/${editid}`,
           data: this.formData
         }).then(() => {
           this.$router.push("/heros");

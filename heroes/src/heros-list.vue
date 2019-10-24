@@ -41,7 +41,7 @@ export default {
   methods:{
     loadData(){
        this.$axios({
-      url:"http://localhost:3000/heros"
+      url:"/heros"
 
     }).then(result=>{
       this.list=result.data;
@@ -52,7 +52,7 @@ export default {
       if(confirm("您确定删除吗?")){
           this.$axios({
         method:"delete",
-        url:`http://localhost:3000/heros/${id}`
+        url:`/heros/${id}`
       }).then(()=>{
         this.loadData();
       })
