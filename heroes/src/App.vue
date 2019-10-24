@@ -16,17 +16,15 @@
 </template>
 
 <script>
-import appHeader from "./app-header.vue";
-import appSilder from "./app-silder.vue";
-import herosList from "./heros-list.vue";
-import addHeros from "./add-heros.vue";
+import appHeader from "./components/common/app-header";
+import appSilder from "./components/common/app-silder.vue";
+
 export default {
   name: "app",
   components: {
     "app-header": appHeader,
     "app-silder": appSilder,
-    "heros-list": herosList,
-    "add-heros": addHeros,
+
   },
   data() {
     return {

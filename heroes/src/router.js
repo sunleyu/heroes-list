@@ -1,11 +1,14 @@
 import Vue from "vue";
 import VueRouter from "vue-router"; //引入vue-router模块
-import weapon from "./weapon";
-import zhuangbei from "./zhuangbei";
-import herosList from "./heros-list";
-import addHeros from "./add-heros";
-import appContainer from "./app-container";
-import editHeros from "./edit-heros";
+
+import weapon from "./views/weapon/weapon";
+import zhuangbei from "./views/zhuangbei/zhuangbei";
+
+import herosList from "./views/heroes/heros-list";
+import addHeros from "./views/heroes/add-heros";
+import editHeros from "./views/heroes/edit-heros";
+
+import appContainer from "./views/heroes/app-container";
 Vue.use(VueRouter) // 使用router
 export default new VueRouter({
   //改变当前默认 激活样式的class名
