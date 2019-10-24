@@ -5,11 +5,11 @@
       <div class="row">
         <app-silder></app-silder>
         <!-- 一级容器 -->
-         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-        <router-view></router-view>
-      
-         </div>
-         
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <transition>
+            <router-view></router-view>
+          </transition>
+        </div>
       </div>
     </div>
   </div>
@@ -23,8 +23,7 @@ export default {
   name: "app",
   components: {
     "app-header": appHeader,
-    "app-silder": appSilder,
-
+    "app-silder": appSilder
   },
   data() {
     return {
@@ -35,31 +34,11 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.v-enter {
+  opacity: 0;
+  color: red;
 }
-
-h1,
-h2 {
-  font-weight: normal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
+.v-enter-active {
+  transition: all 1s;
 }
 </style>
